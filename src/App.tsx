@@ -8,6 +8,7 @@ import {
 import { calculateTravel } from './utils/travel-engine';
 import { useInterstitialAd } from './hooks/useInterstitialAd';
 import { DeviceViewport } from './components/DeviceViewport';
+import BannerAd from './components/BannerAd';
 
 type Phase = 'idle' | 'spinning' | 'result';
 
@@ -801,6 +802,11 @@ const App: React.FC = () => {
             <p className="text-center text-xs text-gray-500 mt-2 mb-4 font-gmarket">
               {NARIN_SPEECH.retry}
             </p>
+
+            {/* Banner Ad — 결과 하단 (부가 영역) */}
+            <div className="mt-4 mb-2">
+              <BannerAd adGroupId="ait.v2.live.1a03b2990b6d4cf5" />
+            </div>
           </div>
         )}
 
